@@ -4,7 +4,7 @@ const PKM = require('../models/pokemonModel.ts');
 const { authenticate } = require('../middlewares/auth.ts');
 
 export const pokemonController = (app: Elysia) => {
-    app.get("/pokemon", async () => {
+    app.get("/pokemons", authenticate, async () => {
         const pokemons = await PKM.find()
         return pokemons
     })

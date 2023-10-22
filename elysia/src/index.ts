@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
-import { pkmRouter } from "./router/pkmRouter";
-import { userRouter } from "./router/pkmRouter";
+import { pkmRouter } from "./router/router";
+import { userRouter } from "./router/router";
 export const app = new Elysia()
 
 const port = 3000
